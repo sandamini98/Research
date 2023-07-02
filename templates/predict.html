@@ -1,0 +1,121 @@
+{%load static%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Predict</title>
+    <style>
+        body{
+            background-image: url(" {% static '\DiabetesPrediction\images\wall10.png' %}");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+        .main{
+            position: fixed;
+            top: 30px;
+            left: 345px;
+            width:530px;
+            background-color: cornsilk;
+            border-radius: 10px;
+            align-items: center;
+            padding:5%;
+        }
+        .container{
+            overflow-y: scroll;
+        }
+        h1{
+            color: darkgoldenrod;
+            font-size: 30px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        input[type=submit]{
+            background-color: gold;
+            border: 2px;
+            color: cornsilk;
+            padding:8px 16px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <div align = 'center' class="main">
+        <h1>Please enter the following information</h1>
+        <form action="result">
+            <table>
+                <tr>
+                    <td align="left">Age:</td>
+                    <td align="left"> <input type="text" name="n1"></td>
+                </tr>
+
+                <tr>
+                    <td align="left">Gender(Male- 0/Female- 1):</td>
+                    <td align="left"> <input type="text" name="n2"></td>
+                </tr>
+
+                <tr>
+                    <td align="left">Height(cm):</td>
+                    <td align="left"> <input type="text" name="n3"></td>
+                </tr>
+
+                <tr>
+                    <td align="left">Weight(kg):</td>
+                    <td align="left"> <input type="text" name="n4"></td>
+                </tr>
+
+                <tr>
+                    <td align="left">BMI:</td>
+                    <td align="left"> <input type="text" name="n5"></td>
+                </tr>
+
+                <tr>
+                    <td align="left">Waist Circumference(cm):</td>
+                    <td align="left"> <input type="text" name="n6"></td>
+                </tr>
+
+                <tr>
+                    <td align="left">Do you exercise in daily?1 or 0:</td>
+                    <td align="left"> <input type="text" name="n7"></td>
+                </tr>
+
+                <tr>
+                    <td align="left">Do you eat fruits & vegetables in daily? 1 or 0:</td>
+                    <td align="left"> <input type="text" name="n8"></td>
+                </tr>
+
+                <tr>
+                    <td align="left">Do you have pressure, 1 or 0:</td>
+                    <td align="left"> <input type="text" name="n9"></td>
+                </tr>
+
+                <tr>
+                    <td align="left">Do your parents have diabetes(1,0):</td>
+                    <td align="left"> <input type="text" name="n10"></td>
+                </tr>
+
+                <tr>
+                    <td align="left">Do your Grand Parents have diabetes(1,0):</td>
+                    <td align="left"> <input type="text" name="n11"></td>
+                </tr>
+
+                <tr>
+                    <td align="left">Does anyone else in the family have diabetes(1,0):</td>
+                    <td align="left"> <input type="text" name="n12"></td>
+                </tr>
+
+                <tr>
+                    <td align="left">Do you smoke? 1 or 0:</td>
+                    <td align="left"> <input type="text" name="n13"></td>
+                </tr>
+
+            </table>
+            <input type="submit">
+        </form>
+        Result:{{result2}}
+    </div>
+</body>
+</html>
